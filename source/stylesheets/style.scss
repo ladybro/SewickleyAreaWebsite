@@ -1,3 +1,26 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 @imprt "reset";
+
+.header{
+	@include outer-container;
+}
+
+.left-box{
+	background: green;
+	@include span-columns(2);
+}
+
+.right-box{
+	background: red;
+	@include span-columns(4);
+}
+
+.menu{
+	@include outer-container;
+	li{
+		@include span-columns(2);
+		display: inline;
+		list-style-type: none;
+	}
+}
