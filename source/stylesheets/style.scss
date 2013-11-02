@@ -1,6 +1,7 @@
+@import "reset";
 @import "bourbon/bourbon";
+@import "grid-settings";
 @import "neat/neat";
-@imprt "reset";
 
 .header{
 	@include outer-container;
@@ -8,19 +9,36 @@
 
 .left-box{
 	background: green;
-	@include span-columns(2);
+	@include span-columns(6);
 }
 
 .right-box{
 	background: red;
-	@include span-columns(4);
+	@include span-columns(6);
 }
 
 .menu{
 	@include outer-container;
 	li{
-		@include span-columns(2);
 		display: inline;
 		list-style-type: none;
+		@include span-columns(2);
+		@include breakpoint($mobile){
+			@include span-columns(2);
+		}
+	}
+}
+
+.info{
+	@include outer-container;
+	.ads{
+		@include span-columns(7);
+	}
+	.cal{
+		@include span-columns(5);
+		
+	}
+	.posts{
+		@include span-columns(12);
 	}
 }

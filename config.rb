@@ -1,7 +1,7 @@
 ###
 # Compass
 ###
-
+set :haml, { :ugly => true, :format => :html5 }
 # Change Compass configuration
 # compass_config do |config|
 #   config.output_style = :compact
