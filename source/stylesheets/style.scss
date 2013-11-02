@@ -33,10 +33,13 @@
 	@include outer-container;
 	.ads{
 		@include span-columns(7);
+		@include breakpoint($mobile){
+			@include span-columns(7);
+		}
 	}
 	.cal{
 		@include span-columns(5);
-		
+		@include omega;
 	}
 	.posts{
 		@include span-columns(12);
