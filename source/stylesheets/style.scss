@@ -23,7 +23,7 @@
 		display: inline;
 		list-style-type: none;
 		@include span-columns(2);
-		@include breakpoint($mobile){
+		@include media($mobile){
 			@include span-columns(2);
 		}
 	}
@@ -33,7 +33,7 @@
 	@include outer-container;
 	.ads{
 		@include span-columns(7);
-		@include breakpoint($mobile){
+		@include media($mobile){
 			@include span-columns(7);
 		}
 	}
