@@ -6,6 +6,12 @@ set :haml, { :ugly => true, :format => :html5 }
 # compass_config do |config|
 #   config.output_style = :compact
 # end
+# Change Compass configuration
+#config :development do
+#  compass_config do |config|
+#   config.sass_options = {:debug_info => true}
+# end
+#end
 
 ###
 # Page options, layouts, aliases and proxies

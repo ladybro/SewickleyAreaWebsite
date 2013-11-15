@@ -3,6 +3,10 @@
 @import "grid-settings";
 @import "neat/neat";
 
+/*$tan: #ffeebb;*/
+$tan: #ede4ca;
+$red: #8a1818;
+
 .header{
 	@include outer-container;
 }
@@ -18,6 +22,8 @@
 }
 
 .menu{
+	background-color: $tan;
+	width: 100%;
 	@include outer-container;
 	li{
 		display: inline;
@@ -26,7 +32,17 @@
 		@include media($mobile){
 			@include span-columns(2);
 		}
+		li:last{
+			@include omega;
+		}
 	}
+}
+
+.title{
+	background-color: $red;
+	text-align: center;
+	color: $tan;
+	font-size: 2.5em;
 }
 
 .info{
@@ -48,4 +64,6 @@
 
 footer{
    border-top: black solid 1px;
+   background-color: $tan;
+   text-align: center;
 }
