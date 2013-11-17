@@ -1,5 +1,16 @@
 <!DOCTYPE = HTML>
 
+<script id="fb-post-template" type="text/x-handlebars-template">
+  <article id="{{postId}}" class="fb-entry">
+  	<header>{{title}}</header>
+		<img src="{{imageSRC}}"/>
+		<p>{{{body}}}</p>
+  	<footer>
+  		<a href="{{postURL}}">See Original Post</a>
+  	</footer>
+  </article>
+</script>
+
 <div class="header">
 	<!--<div class="left-box">left</div>
 	<div class="right-box">right</div>-->
@@ -19,7 +30,7 @@
 		test cal
 	</div>
 
-	<div class="posts">
+	<div id="posts" class="posts">
 		test post
 	</div>
 </div>
