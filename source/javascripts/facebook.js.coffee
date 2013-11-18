@@ -21,7 +21,8 @@ jQuery(document).ready ->
           title:    oPost.title
           postId:   oPost.id
           date:     oPost.published
-          imageSRC: oPost.firstImage
+          imageSRC: oPost.firstImageNormal
+          thumbSRC: oPost.firstImageSmall
           postURL:  oPost.alternate
           body:     oPost.content
 
@@ -29,8 +30,8 @@ jQuery(document).ready ->
         jQuery("#posts").append html
 
 organizePost = (entry) ->
-  entry.firstImage = jQuery(entry.content).find('img:first').attr('src')
-  entry.firstImage = entry.firstImage.replace('s.', 'n.') unless entry.firstImage == `undefined`
+  entry.firstImageSmall = jQuery(entry.content).find('img:first').attr('src')
+  entry.firstImageNormal = entry.firstImageSmall.replace('s.', 'n.') unless entry.firstImageSmall == `undefined`
   content = jQuery("<div></div>").append(entry.content)
   content.find('img:first').remove()
   entry.content = content.html()
