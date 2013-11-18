@@ -12,17 +12,25 @@ jQuery(document).ready ->
     success: (data) ->
       source   = jQuery("#fb-post-template").html();
       template = Handlebars.compile(source);
-      console.log data.query.results.json.entries
+
       jQuery.each data.query.results.json.entries, (i, v) ->
         post = data.query.results.json.entries[i]
+        oPost = organizePost(post)
+
         context =
-          title:    post.title
-          postId:   post.id
-          date:     post.published
-          imageSRC: "something"
-          postURL:  post.alternate
-          body:     post.content
+          title:    oPost.title
+          postId:   oPost.id
+          date:     oPost.published
+          imageSRC: oPost.firstImage
+          postURL:  oPost.alternate
+          body:     oPost.content
+
         html    = template(context);
-        console.log context
         jQuery("#posts").append html
 
+organizePost = (entry) ->
+  entry.firstImage = jQuery(entry.content).find('img:first').attr('src')
+  content = jQuery("<div></div>").append(entry.content)
+  content.find('img:first').remove()
+  entry.content = content.html()
+  entry
