@@ -62,6 +62,38 @@ $red: #8a1818;
 	}
 }
 
+.map{
+	@include span-columns(6)
+
+}
+
+.mission{
+	@include span-columns(6)
+
+}
+
+.business-links{
+	background-color: $red;
+	text-decoration: none;
+	text-align: center;
+	color: $tan;
+	font-size: 1.75em;
+}
+
+.business-list{
+	
+
+}
+
+.real-estate-img{
+	@include span-columns(2)
+	
+}
+
+.real-estate-info{
+	@include span-columns(2)
+}
+
 footer{
    border-top: black solid 1px;
    background-color: $tan;
