@@ -96,6 +96,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  coffee-script
   middleman (~> 3.1.6)
   middleman-livereload (~> 3.1.0)
   ruby18_source_location
