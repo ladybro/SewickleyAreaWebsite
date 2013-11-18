@@ -30,6 +30,7 @@ jQuery(document).ready ->
 
 organizePost = (entry) ->
   entry.firstImage = jQuery(entry.content).find('img:first').attr('src')
+  entry.firstImage = entry.firstImage.replace('s.', 'n.') unless entry.firstImage == `undefined`
   content = jQuery("<div></div>").append(entry.content)
   content.find('img:first').remove()
   entry.content = content.html()
